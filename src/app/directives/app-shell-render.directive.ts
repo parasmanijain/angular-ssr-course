@@ -1,31 +1,29 @@
-
-
 import {
-  Directive, Inject, OnInit, PLATFORM_ID,
-  TemplateRef, ViewContainerRef
-} from "@angular/core";
-import {isPlatformServer} from "@angular/common";
+  Directive,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 
 @Directive({
-    selector: "[appShellRender]",
-    standalone: false
+  selector: '[appShellRender]',
+  standalone: false,
 })
 export class AppShellRenderDirective implements OnInit {
-
-  constructor(@Inject(PLATFORM_ID) private platformId,
-              private templateRef: TemplateRef<any>,
-              private viewContainer: ViewContainerRef) {
-
-  }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId,
+    private templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef
+  ) {}
 
   ngOnInit() {
     if (isPlatformServer(this.platformId)) {
       this.viewContainer.createEmbeddedView(this.templateRef);
-    }
-    else {
+    } else {
       this.viewContainer.clear();
     }
-
   }
-
 }

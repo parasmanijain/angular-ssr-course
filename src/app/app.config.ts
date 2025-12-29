@@ -55,7 +55,7 @@ export const appConfig: ApplicationConfig = {
       MatDatepickerModule,
       ReactiveFormsModule,
       AppShellRenderDirective,
-      AppShellNoRenderDirective
+      AppShellNoRenderDirective,
     ),
     CoursesService,
     CourseResolver,

@@ -3,15 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prerender": "http-server -c-1 dist/angular-ssr-course/browser",
-    "dev:ssr": "ng serve",
-    "build:ssr": "ng build --configuration=production",
-    "serve:ssr": "node dist/angular-ssr-course/server/server.mjs"
+    "dev:ssr": "ng run angular-ssr-course:serve-ssr",
+    "build:ssr": "ng build --configuration=production && ng run angular-ssr-course:server",
+    "serve:ssr": "node dist/angular-ssr-course/server/server.mjs",
+    "prepare": "npm run build:ssr",
+    "start": "npm run serve:ssr"
   },
   "private": true,
   "dependencies": {

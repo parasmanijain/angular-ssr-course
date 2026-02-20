@@ -45,8 +45,8 @@ importers:
         specifier: ^21.1.4
         version: 21.1.4(fb3bca3ccd86997b5f8f28cf467b8d7e)
       express:
-        specifier: '4'
-        version: 4.22.1
+        specifier: ^5.2.1
+        version: 5.2.1
       rxjs:
         specifier: ~7.8.2
         version: 7.8.2

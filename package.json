@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prerender": "http-server -c-1 dist/angular-ssr-course/browser", 
-    "dev:ssr": "ng serve", 
-    "build:ssr": "ng build --configuration=production", 
+    "prerender": "http-server -c-1 dist/angular-ssr-course/browser",
+    "dev:ssr": "ng serve",
+    "build:ssr": "ng build --configuration=production",
     "serve:ssr": "node dist/angular-ssr-course/server/server.mjs"
   },
   "private": true,
@@ -50,5 +50,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
-  }
+  },
+  "packageManager": "pnpm@10.30.1"
 }

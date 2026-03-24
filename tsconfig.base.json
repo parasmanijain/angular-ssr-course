@@ -1,16 +1,29 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "module": "esnext",
+    "module": "ES2022",
     "esModuleInterop": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "bundler",
     "experimentalDecorators": true,
-    "target": "ES2022",
+    "target": "ES2023",
     "typeRoots": ["node_modules/@types"],
     "useDefineForClassFields": false,
-    "emitDecoratorMetadata": true
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
   }
 }

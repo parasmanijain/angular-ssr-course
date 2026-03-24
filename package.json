@@ -7,6 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "type-check": "tsc --noEmit",
     "e2e": "ng e2e",
     "prerender": "http-server -c-1 dist/angular-ssr-course/browser",
     "dev:ssr": "ng serve",
@@ -49,7 +51,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0"
   },
   "packageManager": "pnpm@10.32.1"
 }

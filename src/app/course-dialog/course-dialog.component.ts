@@ -1,23 +1,18 @@
-import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-} from '@angular/material/dialog';
-import { Course } from '../model/course';
-import {
-  FormBuilder,
-  Validators,
-  FormGroup,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogActions,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
+} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import type { Course } from '../model/course';
 
 @Component({
   selector: 'course-dialog',
@@ -42,7 +37,7 @@ export class CourseDialogComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<CourseDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) { description, longDescription, category }: Course,
+    @Inject(MAT_DIALOG_DATA) { description, longDescription, category }: Course
   ) {
     this.description = description;
 
